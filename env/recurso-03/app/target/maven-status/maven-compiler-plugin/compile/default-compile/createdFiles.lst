@@ -1,0 +1,4 @@
+br/edu/ifpb/domain/Campeao.class
+br/edu/ifpb/web/ControladorDeCampeoes.class
+br/edu/ifpb/infra/CampeoesJDBC.class
+br/edu/ifpb/domain/Campeoes.class
