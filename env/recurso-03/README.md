@@ -6,7 +6,7 @@ sudo docker image build postgres -t r3-db
 ```
 Criar e executar o container:
 ```
-sudo docker run -d --name banco-postgres r3
+sudo docker run -d --name banco-postgres r3-db
 ```
 
 ### Executando Aplicação Web
