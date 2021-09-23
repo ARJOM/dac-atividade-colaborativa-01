@@ -1,0 +1,21 @@
+version: '3'
+services:   
+  app-pratica:
+    container_name: app-pratica
+    image: r5-app
+    build: 
+      context: ./
+      dockerfile: ./Dockerfile
+    ports: 
+     - "8080:8080"
+     - "4848:4848"
+    depends_on: 
+     - banco-pratica
+    links: 
+     - "banco-pratica:host-banco"
+  banco-pratica:
+    container_name: banco-pratica
+    image: r5-banco
+    build: ./env/recurso-05/banco
+    ports: 
+    - "5433:5432"
