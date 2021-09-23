@@ -5,13 +5,13 @@ import java.util.List;
 
 public interface Integrantes extends Serializable {
 
-    public void nova(Integrante integrante);
+    public Integrante nova(Integrante integrante);
 
     public List<Integrante> todas();
 
     public void excluir(Integrante integrante);
 
-    public void atualizar(Integrante integrante);
+    public Integrante atualizar(Integrante integrante);
 
     public Integrante localizarIntegranteComId(Integer id);
 }

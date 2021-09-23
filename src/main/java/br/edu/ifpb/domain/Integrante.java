@@ -49,6 +49,10 @@ public class Integrante {
         this.cpf = cpf;
     }
 
+    public static Integrante fake(){
+        return new Integrante (1,"fake",LocalDate.now(),new CPF("fake"));
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

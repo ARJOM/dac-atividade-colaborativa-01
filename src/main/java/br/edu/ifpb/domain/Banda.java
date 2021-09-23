@@ -1,6 +1,8 @@
 package br.edu.ifpb.domain;
 
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 public class Banda {
@@ -8,11 +10,13 @@ public class Banda {
     private Integer id;
     private String localDeOrigem;
     private String nomeFantasia;
+    private List<Integrante> integrantes; 
 
     public Banda(Integer id, String localDeOrigem, String nomeFantasia) {
         this.id = id;
         this.localDeOrigem = localDeOrigem;
         this.nomeFantasia = nomeFantasia;
+        this.integrantes = new ArrayList<>();
     }
 
     public Integer getId() {
@@ -38,6 +42,22 @@ public class Banda {
     public void setNomeFantasia(String nomeFantasia) {
         this.nomeFantasia = nomeFantasia;
     }
+
+    public static Banda fake() {
+        return new Banda(1, "Fake", "Fake");
+    }
+    public void adicionarIntegrante(Integrante integrante){
+        this.integrantes.add(integrante);
+    }
+
+    public void removerIntegrante(Integrante integrante){
+        this.integrantes.remove(integrante);
+    }
+
+    public List<Integrante> getIntegrantes(){
+        return this.integrantes;
+    }
+
 
     @Override
     public boolean equals(Object o) {
